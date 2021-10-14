@@ -31,4 +31,4 @@ def join_dataframes_and_upload_csv():
     string_buffer = io.StringIO()                                               # in-memory text streams
     average_per_species.to_csv(string_buffer)                                   # converting to csv file
     s3_client.put_object(Body=string_buffer.getvalue(), Bucket=bucket_name,     # uploading to the bucket
-                         Key='Data24/Fish/Tia_Fish_Market_Averages.csv')        # assigning new key value
+                         Key='Data100/fish/Tia.csv')                            # assigning new key value
